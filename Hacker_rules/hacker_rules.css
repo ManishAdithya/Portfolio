@@ -33,3 +33,58 @@ p {
     margin: 10px 0;
     font-size: 18px;
 }
+
+footer {
+    position: absolute;
+    width: 100%;
+    padding: 20px;
+    text-align: right;
+    z-index: 1;
+}
+
+footer .social-media {
+    list-style: none;
+    display: inline-flex;
+    gap: 25px;
+}
+
+footer .social-media li {
+    display: inline-block;
+}
+
+footer .social-media li a img {
+    width: 30px;
+    height: auto;
+    transition: 0.3s;
+}
+
+footer .social-media li a:hover img {
+    animation: logo_glitch 0.5s infinite;
+}
+
+@keyframes logo_glitch {
+    0% {
+        transform: translate(0);
+        filter: brightness(100%);
+    }
+    20% {
+        transform: translate(2px, -2px);
+        filter: brightness(150%);
+    }
+    40% {
+        transform: translate(-2px, 2px);
+        filter: brightness(200%);
+    }
+    60% {
+        transform: translate(2px, -2px);
+        filter: brightness(150%);
+    }
+    80% {
+        transform: translate(0);
+        filter: brightness(100%);
+    }
+    100% {
+        transform: translate(-2px, 2px);
+        filter: brightness(200%);
+    }
+}

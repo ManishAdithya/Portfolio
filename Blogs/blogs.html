@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5h3nron's Portfolio</title>
+    <link rel="stylesheet" href="blogs.css">
+</head>
+<body>
+    <canvas id="background-canvas"></canvas>
+    <div class="container">
+        
+        <div class="category">
+            <h2>Game Hacking</h2>
+            <div class="blog">
+                <div class="blog-header" onclick="toggleBlog('blog1')">
+                    <span class="title">Hacking SpacePeng with Frida: A Deep Dive into Game Hacking and Script Exploits</span>
+                    <span class="arrow">&#9660;</span>
+                </div>
+                <div class="blog-content" id="blog1">
+                    <p>A blog demonstrating the use of Frida to alter Game variables and methods</p>
+                    <a href="https://medium.com/@5h3nron/hacking-spacepeng-with-frida-a-deep-dive-into-game-hacking-and-script-exploits-559e7546fab2">Read more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>HTBs</h2>
+            <div class="blog">
+                <div class="blog-header" onclick="toggleBlog('blog2')">
+                    <span class="title">HackTheBox: CryptoHorrifc</span>
+                    <span class="arrow">&#9660;</span>
+                </div>
+                <div class="blog-content" id="blog2">
+                    <p>Step-by-step walkthrough of how I solved the CryptoHorrifc APK.</p>
+                    <a href="https://medium.com/@5h3nron/solving-cryptohorrific-challenge-from-hack-the-box-0e79f0138af6">Read more</a>
+                </div>
+            </div>
+
+            <div class="blog">
+                <div class="blog-header" onclick="toggleBlog('blog3')">
+                    <span class="title">HackTheBox: SAW</span>
+                    <span class="arrow">&#9660;</span>
+                </div>
+                <div class="blog-content" id="blog3">
+                    <p>Step-by-step walkthrough of how I solved the SAW APK.</p>
+                    <a href="https://medium.com/@5h3nron/htb-saw-challenge-the-saw-apk-d4be714b0a0e">Read more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>Vulnerable APKs</h2>
+            <div class="blog">
+                <div class="blog-header" onclick="toggleBlog('blog4')">
+                    <span class="title">Injured Android: Part 2</span>
+                    <span class="arrow">&#9660;</span>
+                </div>
+                <div class="blog-content" id="blog4">
+                    <p>Exploring the possible vulnerabilities in an APK. </p>
+                    <a href="https://medium.com/@5h3nron/breaking-down-the-injured-android-apk-part-2-e4ad96c0c6c0">Read more</a>
+                </div>
+            </div>
+
+            <div class="blog">
+                <div class="blog-header" onclick="toggleBlog('blog5')">
+                    <span class="title">Injured Android: Part 1 </span>
+                    <span class="arrow">&#9660;</span>
+                </div>
+                <div class="blog-content" id="blog5">
+                    <p>Exploring the possible vulnerabilities in an APK.</p>
+                    <a href="https://medium.com/@5h3nron/breaking-down-the-injured-android-apk-part-1-3c73651a2728">Read more</a>
+                </div>
+            </div>
+
+            <div class="blog">
+                <div class="blog-header" onclick="toggleBlog('blog6')">
+                    <span class="title">DIVA </span>
+                    <span class="arrow">&#9660;</span>
+                </div>
+                <div class="blog-content" id="blog6">
+                    <p>Exploring the possible vulnerabilities in an APK.</p>
+                    <a href="https://medium.com/@5h3nron/exploring-vulnerabilities-in-diva-apk-a-comprehensive-analysis-1f7caba33e9e">Read more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>AI</h2>
+            <div class="blog">
+                <div class="blog-header" onclick="toggleBlog('blog7')">
+                    <span class="title">The Fundamentals/Basics of AI</span>
+                    <span class="arrow">&#9660;</span>
+                </div>
+                <div class="blog-content" id="blog7">
+                    <p>Understanding key concepts like the Bellman Equation, Markov Decision Processes (MDPs), Q-learning, and Temporal Difference (TD)</p>
+                    <a href="https://medium.com/@5h3nron/the-fundamentals-basics-of-ai-b0a40c836918">Read more</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <ul class="social-media">
+            <li><a href="https://www.linkedin.com/in/manish-adithya-p-v-215b32287/" target="_blank">
+                <img src="../images/linkedin.png" alt="LinkedIn">
+            </a></li>
+            <li><a href="https://github.com/ManishAdithya" target="_blank">
+                <img src="../images/github.png" alt="GitHub">
+            </a></li>
+            <li><a href="https://medium.com/@5h3nron" target="_blank">
+                <img src="../images/medium.png" alt="Medium">
+            </a></li>
+        </ul>
+    </footer>
+
+    <script src="blogs.js"></script>
+    <script src="particles.js"></script>
+</body>
+</html>

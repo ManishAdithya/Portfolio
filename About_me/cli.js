@@ -32,7 +32,7 @@ Welcome to 5h3nron's About Me page, Type "help" to see the commands you can use
         GitHub         https://github.com/ManishAdithya
         Medium         https://medium.com/@5h3nron
         LinkedIn       https://www.linkedin.com/in/manish-adithya-p-v-215b32287/
-        Telegram ID    5h3nron
+        Telegram ID    The_5h3nron
         Instragram ID  manish._2004
         `,
 

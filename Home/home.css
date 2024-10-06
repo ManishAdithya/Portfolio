@@ -37,6 +37,7 @@ header {
     z-index: 1;
     transition: 0.6s;
     animation: headerAnimation 1.5s ease forwards;
+    background-color: rgb(0, 0, 0, 0.5);
 }
 
 .logo-container {

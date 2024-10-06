@@ -1,0 +1,159 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a0a;
+    color: #18fc08;
+    overflow-x: hidden;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.container {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 30px;
+    background: transparent;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+    flex-grow: 1;
+}
+
+h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #0ffb79;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+}
+
+.blog {
+    margin: 20px 0;
+}
+
+.blog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: rgba(30, 30, 30, 0.7);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    color: #0ffb79;
+    box-shadow: 0 4px 10px rgba(0, 255, 0, 0.1);
+}
+
+.blog-header:hover {
+    background: rgba(50, 50, 50, 0.7);
+}
+
+.blog-content {
+    display: none;
+    padding: 15px;
+    margin-top: 10px;
+    background-color: rgba(30, 30, 30, 0.7);
+    border-radius: 8px;
+    color: #ffffff;
+}
+
+.blog-content a {
+    color: #00bfff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.blog-content a:hover {
+    color: #82e9ff;
+    text-decoration: underline;
+}
+
+.arrow {
+    font-size: 18px;
+    transition: transform 0.5s ease;
+}
+
+.arrow.active {
+    transform: rotate(180deg);
+}
+
+.blog-content.show {
+    display: block;
+}
+
+footer {
+    position: fixed; /* Fixes the footer at the bottom */
+    bottom: 0;
+    right: 10px; /* Places the footer 10px from the right */
+    padding: 10px;
+    z-index: 1;
+}
+
+footer .social-media {
+    list-style: none;
+    display: inline-flex;
+    gap: 25px;
+}
+
+footer .social-media li {
+    display: inline-block;
+}
+
+footer .social-media li a img {
+    width: 30px;
+    height: auto;
+    transition: 0.3s;
+}
+
+footer .social-media li a:hover img {
+    animation: logo_glitch 0.5s infinite;
+}
+
+@keyframes logo_glitch {
+    0% {
+        transform: translate(0);
+        filter: brightness(100%);
+    }
+    20% {
+        transform: translate(2px, -2px);
+        filter: brightness(150%);
+    }
+    40% {
+        transform: translate(-2px, 2px);
+        filter: brightness(200%);
+    }
+    60% {
+        transform: translate(2px, -2px);
+        filter: brightness(150%);
+    }
+    80% {
+        transform: translate(0);
+        filter: brightness(100%);
+    }
+    100% {
+        transform: translate(-2px, 2px);
+        filter: brightness(200%);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .blog-header {
+        padding: 10px 15px;
+    }
+}
