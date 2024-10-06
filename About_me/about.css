@@ -174,8 +174,8 @@ footer {
     width: 100%;
     text-align: right;
     z-index: 1;
-    position: absolute; /* Use absolute positioning */
-    bottom: 10px; /* 10px above the bottom of the page */
+    position: absolute; 
+    bottom: 10px; 
     padding-right: 10px;
 }
 
