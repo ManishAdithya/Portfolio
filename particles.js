@@ -1,8 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const canvas = document.getElementById("background-canvas");
     const ctx = canvas.getContext("2d");
-
-    // Resize canvas to fit the entire window
+    
     function resizeCanvas() {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
@@ -14,16 +13,14 @@ document.addEventListener("DOMContentLoaded", () => {
     let mouse = {
         x: null,
         y: null,
-        radius: 50 // Increase the radius of interaction
+        radius: 50 
     };
 
-    // Update mouse position
     window.addEventListener("mousemove", (event) => {
         mouse.x = event.x;
         mouse.y = event.y;
     });
 
-    // Clear mouse position when the mouse leaves the canvas
     window.addEventListener("mouseout", () => {
         mouse.x = null;
         mouse.y = null;
@@ -39,11 +36,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         update() {
-            // Update particle position
+
             this.x += this.speedX;
             this.y += this.speedY;
 
-            // Boundary conditions
+
             if (this.x < 0 || this.x > canvas.width) {
                 this.x = Math.random() * canvas.width;
             }
@@ -52,12 +49,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 this.y = Math.random() * canvas.height;
             }
 
-            // Interaction with mouse
             let dx = mouse.x - this.x;
             let dy = mouse.y - this.y;
             let distance = Math.sqrt(dx * dx + dy * dy);
             if (distance < mouse.radius) {
-                this.speedX += dx / distance * 0.05; // Attract to mouse
+                this.speedX += dx / distance * 0.05; 
                 this.speedY += dy / distance * 0.05;
             }
         }
@@ -71,7 +67,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Connect particles and draw lines to the mouse
     function connect() {
         for (let a = 0; a < particlesArray.length; a++) {
             for (let b = a; b < particlesArray.length; b++) {
@@ -86,7 +81,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             }
 
-            // Draw line between particle and mouse if within radius
             let dx = mouse.x - particlesArray[a].x;
             let dy = mouse.y - particlesArray[a].y;
             let mouseDistance = Math.sqrt(dx * dx + dy * dy);
@@ -101,7 +95,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Initialize particles
     function init() {
         particlesArray = [];
         for (let i = 0; i < numberOfParticles; i++) {
@@ -109,7 +102,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Animate particles
     function animate() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         for (let i = 0; i < particlesArray.length; i++) {
@@ -120,11 +112,9 @@ document.addEventListener("DOMContentLoaded", () => {
         requestAnimationFrame(animate);
     }
 
-    // Run initialization and animation
     init();
     animate();
 
-    // Resize canvas on window resize
     window.addEventListener("resize", () => {
         resizeCanvas();
         init();
