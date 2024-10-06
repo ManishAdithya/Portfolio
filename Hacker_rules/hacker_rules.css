@@ -1,0 +1,35 @@
+body {
+    background-color: black;
+    color: chartreuse;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    overflow: hidden;
+}
+
+#background-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+.container {
+    border: 15px double chartreuse;
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+    background: black;
+    z-index: 1;
+}
+
+#enter{
+    text-align: center;
+}
+
+p {
+    margin: 10px 0;
+    font-size: 18px;
+}
