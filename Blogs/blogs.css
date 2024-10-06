@@ -43,7 +43,7 @@ h2 {
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-    background: rgba(30, 30, 30, 0.7);
+    background: rgba(30, 30, 30);
     border-radius: 8px;
     cursor: pointer;
     transition: background 0.3s ease;
@@ -52,14 +52,14 @@ h2 {
 }
 
 .blog-header:hover {
-    background: rgba(50, 50, 50, 0.7);
+    background: rgba(50, 50, 50);
 }
 
 .blog-content {
     display: none;
     padding: 15px;
     margin-top: 10px;
-    background-color: rgba(30, 30, 30, 0.7);
+    background-color: rgba(30, 30, 30);
     border-radius: 8px;
     color: #ffffff;
 }
